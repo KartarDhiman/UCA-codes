@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int sumrev(int a)
+{
+    int temp;
+    static int sum = 0;
+    if(a >= 1)
+    {
+        temp = a % 10;
+        sum = sum * 10 + temp;
+        sumrev(a/10);
+    }
+    else
+    return sum;
+}
+
+int main() {
+    
+    int a;
+    cin >> a;
+    
+    cout <<  sumrev(a);
+    
+	return 0;
+}
