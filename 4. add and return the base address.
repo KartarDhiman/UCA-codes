@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int* ret(int a,int b)
+{
+    int *ptr;
+    ptr = new int;
+    *ptr = a + b;
+    return ptr;
+}
+
+int main()
+{
+    int a,b;
+    cin >> a >> b;
+    int *p = ret(a,b);
+    cout << p;
+}
